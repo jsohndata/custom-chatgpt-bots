@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Custom ChatGPT Bots</title>
+<style>
+body {
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Miami Color Gradient */
+    background: linear-gradient(135deg, #fffd69, #00fbff, #ff0080, #43023b); /* Pink, Orange, Fuchsia, Red-Orange */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 3.5rem; /* Larger heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+}
+
+.card-link { 
+    display: block; /* Make entire area clickable */
+    text-decoration: none; /* Remove default link styling */
+    color: inherit; /* Inherit color from parent */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Add transition for hover effect on image */
+}
+
+.card-link:hover img {
+    transform: scale(1.1); /* Zoom image slightly on hover */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Center the last card */
+.card:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+</head>
+<body>
+
+    <h1>Custom ChatGPT Bots</h1>
+
+    <div class="container" id="cardContainer">
+    </div>
+
+    <script>
+        // ... (Your existing data array and createCardElement function) ...
+        
+         const data = [
+          {
+            image: "./src/images/turbo-jello.png",
+            title: "Turbo Jello: Video SEO Booster–Jiggle",
+            description: "Turbocharge Your YouTube Video's Reach 🚀 with Tailored SEO Title and description 🎯",
+            url: "https://chatgpt.com/g/g-7su0OuzDm-turbo-jello-video-seo-booster-jiggle"
+          },
+          {
+            image: "./src/images/turbo-kitten.png",
+            title: "Turbo Kitten: Social Media Content Booster–Pounce",
+            description: "All-platform tailored social media content: engaging captions, hashtags, and more for Facebook, Twitter (X), LinkedIn, Instagram.",
+            url: "https://chatgpt.com/g/g-NttDYFbCR-turbo-kitten-social-media-content-booster-pounce"
+          },
+          {
+            image: "./src/images/turbo-pup.png",
+            title: "Turbo Pup: Generative AI Prompt Booster–Bark",
+            description: "Crafts efficient, visually descriptive AI prompts 🔥From complicated to straightforward prompts ⚡️Try it out!",
+            url: "https://chatgpt.com/g/g-ZvQ4iGay6-turbo-pup-generative-ai-prompt-booster-bark"
+          }
+        ]; 
+
+        const cardContainer = document.getElementById("cardContainer");
+
+        const createCardElement = (tag, className, content) => {
+            const element = document.createElement(tag);
+            if (className) element.classList.add(className);
+            if (content) element.textContent = content;
+            return element;
+        };
+
+        data.forEach(item => {
+            const card = createCardElement("div", "card");
+            const cardLink = createCardElement("a", "card-link");
+            cardLink.href = item.url; 
+            cardLink.target = "_blank";
+            const img = createCardElement("img");
+            img.src = item.image;
+            img.alt = item.title; // Add descriptive alt text here (e.g., "Image of a turbocharged jello character")
+
+            const cardContent = createCardElement("div", "card-content");
+            const title = createCardElement("h2", "card-title", item.title);
+            const description = createCardElement("p", "card-description", item.description);
+
+            cardContent.append(title, description);
+            cardLink.append(img, cardContent); 
+            card.append(cardLink); 
+            cardContainer.appendChild(card); 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fffd69, #00fbff, #ff0080, #43023b);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: grid;               /* Use grid for better control of columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-rows: auto;   
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;      /* NEW: Center items vertically */  
+    gap: 30px;
+    padding: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.4s ease-out; /* Smoother transition on all properties */
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.1); /* Lift up and enlarge more */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Even bigger drop shadow */
+}
+
+.card-link:hover img {
+    transform: scale(1.2) rotate(7deg); /* Zoom and rotate more on hover */
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+.card-link:hover img {
+    transform: scale(1.1) rotate(5deg); /* Zoom and rotate slightly on hover */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff0080; /* Add a pop of color to the title */
+}
+
+.card-description {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}

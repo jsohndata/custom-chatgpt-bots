@@ -1,8 +1,8 @@
 # Custom ChatGPT Bots
-[![Read Me](./src/images/readme.png)](https://github.com/jsohndata/reaction-time)
+[![Read Me](./src/images/readme.png)](https://jsohndata.github.io/custom-chatgpt-bots/)
 🤖 AI-Assited (Gemini 1.5 Pro)
 
-The "Reaction Time" project is a web-based application that measures a user's reaction time using JavaScript, HTML, and CSS. It involves basic web development techniques such as event handling and timing functions to provide an interactive experience where users can test and improve their response speed.
+The "Custom ChatGPT Bots" project offers a listing of customizable ChatGPT-based bots to enhance your daily AI workflow. 
 
 ## Site
-* 👉 [github.com/jsohndata/reaction-time](https://github.com/jsohndata/reaction-time)
+* 👉 [jsohndata.github.io/custom-chatgpt-bots/](https://jsohndata.github.io/custom-chatgpt-bots/)

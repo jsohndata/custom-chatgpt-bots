@@ -7,8 +7,8 @@ const data = [
   },
   {
     image: "./src/images/seo-blog-content-crafter.webp",
-    title: "SEO Blog/Content Crafter",
-    description: "Generates SEO titles, slugs, descriptions, and 310+ word blog content optimized with keyphrases.",
+    title: "VSO/SEO Blog Content Writer Assistant",
+    description: "Creates efficient, voice search-optimized content (320-450 words) using active voice, concise language, and up-to-date SEO practices.",
     url: "https://chatgpt.com/g/g-IqhesM810-seo-blog-content-crafter"
   },
 

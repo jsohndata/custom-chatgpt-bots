@@ -7,8 +7,8 @@ const data = [
   },
   {
     image: "./src/images/seo-blog-content-crafter.webp",
-    title: "VSO/SEO Blog Content Writer Assistant",
-    description: "Creates efficient, voice search-optimized content, 320-450 words (1.5-2.5 minutes of audio) using active voice, concise language, and up-to-date SEO practices.",
+    title: "VSO Blog Content Writer Assistant",
+    description: "Creates concise, voice search-optimized content, 320-450 words (1.5-2.5 minutes of audio), using active voice, E-E-A-T, and the best SEO practices.",
     url: "https://chatgpt.com/g/g-IqhesM810-seo-blog-content-crafter"
   },
 
